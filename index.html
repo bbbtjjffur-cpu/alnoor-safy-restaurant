@@ -1,0 +1,1233 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>مطعم النور الصافي | أفضل وجبات شاورما وبروستد وبرغر في عمان</title>
+    <meta name="description" content="استمتع بأشهى وجبات الشاورما، البروستد المقرمش، والبرغر الطازج من مطعم النور الصافي في عمان. جودة لا تساوم وطعم لا يُقاوم. اطلب الآن!">
+    <meta name="keywords" content="مطعم النور الصافي, شاورما عمان, بروستد الأردن, برغر, وجبات سريعة, مطاعم عمان">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="مطعم النور الصافي | الوجبات السريعة">
+    <meta property="og:description" content="وجبات شاورما، بروستد، وسناكات مميزة بأعلى معايير الجودة في عمان.">
+    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEcKRZJXwhmoT-0xy_vdbcLbGPfSbEGVvpKx5a3Ca7ZK-z8Mmy49zOIM0&s=10">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #f15a24;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f9fa;
+            --star-color: #ffbe0b;
+            --bg-color: #f8f9fa;
+            --text-color: #1a1a1a;
+            --card-bg: #ffffff;
+            --border-color: #eeeeee;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #f8f9fa;
+            --card-bg: #1e1e1e;
+            --border-color: #333333;
+            --light-color: #1a1a1a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding-top: 85px;
+            transition: background-color 0.3s, color 0.3s;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: var(--dark-color);
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .restaurant-logo {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            border-radius: 50%;
+            background-color: white;
+            padding: 2px;
+            transition: transform 0.3s ease;
+        }
+
+        header h1 {
+            font-size: 1.35rem;
+            color: var(--secondary-color);
+            white-space: nowrap;
+        }
+
+        .nav-and-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 5px;
+        }
+
+            .navbar a {
+                color: #fff;
+                text-decoration: none;
+                padding: 8px 14px;
+                font-size: 0.95rem;
+                font-weight: 500;
+                border-radius: 20px;
+                transition: all 0.3s ease;
+            }
+
+                .navbar a.active, .navbar a:hover {
+                    background-color: var(--primary-color);
+                    color: white;
+                }
+
+        .menu-image-link {
+            background-color: var(--secondary-color);
+            color: white !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: bold !important;
+            box-shadow: 0 2px 8px rgba(241, 90, 36, 0.3);
+        }
+
+            .menu-image-link:hover {
+                background-color: var(--primary-color) !important;
+            }
+
+        .theme-toggle-btn {
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s ease;
+        }
+
+            .theme-toggle-btn:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-color: var(--secondary-color);
+            }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1561758033-d89a9ad46330?q=80&w=1200') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+            .hero h2 {
+                font-size: 2.3rem;
+                margin-bottom: 12px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            }
+
+            .hero p {
+                font-size: 1.25rem;
+                margin-bottom: 25px;
+                max-width: 600px;
+            }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+        }
+
+            .cta-btn:hover {
+                background-color: var(--secondary-color);
+                transform: translateY(-2px);
+            }
+
+        section, main {
+            scroll-margin-top: 110px;
+        }
+
+        .menu-container {
+            max-width: 1200px;
+            margin: 50px auto 30px;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2rem;
+            color: var(--text-color);
+        }
+
+            .section-title::after {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 4px;
+                background-color: var(--secondary-color);
+                margin: 10px auto 0;
+                border-radius: 2px;
+            }
+
+        .section-subtitle {
+            text-align: center;
+            color: #888;
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .menu-category {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-top: 5px solid var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .category-img-wrapper {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        .category-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .category-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.35rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 6px;
+        }
+
+            .menu-item:last-child {
+                margin-bottom: 0;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+        .item-price {
+            font-weight: bold;
+            color: var(--secondary-color);
+            white-space: nowrap;
+            padding-right: 12px;
+        }
+
+        .menu-more-box {
+            max-width: 1200px;
+            margin: 20px auto 50px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .menu-call-banner {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: var(--card-bg);
+            border: 2px solid var(--secondary-color);
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+            .menu-call-banner span {
+                color: var(--primary-color);
+            }
+
+            .menu-call-banner i.fa-phone-flip {
+                color: #25d366;
+                background: rgba(37, 211, 102, 0.1);
+                padding: 8px;
+                border-radius: 50%;
+            }
+
+            .menu-call-banner i.fa-arrow-left {
+                color: var(--secondary-color);
+                animation: bounceArrow 1.2s infinite ease-in-out;
+            }
+
+        @keyframes bounceArrow {
+            0%, 100% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(-6px);
+            }
+        }
+
+        .reviews-section {
+            background-color: var(--card-bg);
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .reviews-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0 35px;
+        }
+
+        .google-rating-box {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--bg-color);
+            padding: 12px 30px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+        }
+
+        .rating-score {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+            .rating-score i {
+                color: #4285F4;
+            }
+
+        .rating-stars {
+            color: var(--star-color);
+            font-size: 1.1rem;
+            margin-top: 4px;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            overflow: hidden;
+            min-height: 150px;
+        }
+
+        .review-card {
+            background-color: var(--bg-color);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: right;
+            border-right: 5px solid var(--primary-color);
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+            .review-card.active {
+                display: block;
+            }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--dark-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .user-name {
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .review-stars {
+            color: var(--star-color);
+            font-size: 0.95rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--dark-color);
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            z-index: 10;
+        }
+
+            .slider-btn.prev {
+                right: -10px;
+            }
+
+            .slider-btn.next {
+                left: -10px;
+            }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            .dot.active {
+                background-color: var(--primary-color);
+                width: 20px;
+                border-radius: 5px;
+            }
+
+        .social-section {
+            background-color: var(--light-color);
+            padding: 35px 20px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .social-title {
+            font-size: 1.35rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.3rem;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+            .social-icon.facebook {
+                background-color: #1877f2;
+            }
+
+            .social-icon.instagram {
+                background-color: #e1306c;
+            }
+
+            .social-icon.whatsapp {
+                background-color: #25d366;
+            }
+
+        .info-section {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 3px solid var(--secondary-color);
+        }
+
+        .info-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .info-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: right;
+        }
+
+        .info-box h4 {
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+            font-size: 1.15rem;
+        }
+
+        .info-box p {
+            color: #ccc;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .map-action-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px dashed rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px 20px;
+            min-height: 200px;
+        }
+
+            .map-action-container p {
+                font-size: 1rem;
+                margin-bottom: 15px;
+                color: #ddd;
+            }
+
+        .location-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #4285F4, #34A853);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.2);
+        }
+
+            .location-btn::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 50px;
+                transform: scale(0);
+                animation: pulse-wave 2s infinite ease-out;
+            }
+
+        @keyframes pulse-wave {
+            0% {
+                transform: scale(0.95);
+                opacity: 0.8;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+
+            100% {
+                transform: scale(1.15);
+                opacity: 0;
+            }
+        }
+
+        footer {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            border-top: 1px solid #222;
+        }
+
+        .floating-buttons-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 2000;
+        }
+
+        .floating-btn {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border: none;
+        }
+
+        .call-float {
+            background-color: #25d366;
+        }
+
+        .back-to-top {
+            background-color: var(--primary-color);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: all 0.3s ease;
+        }
+
+            .back-to-top.show {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+        /* =================== تحسينات شاملة وخاصة لشاشات الجوال =================== */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 135px; /* مسافة ممتازة للهيدر المدمج على الجوال */
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 8px;
+                padding: 10px 12px;
+            }
+
+            .logo-area {
+                gap: 8px;
+            }
+
+            .restaurant-logo {
+                width: 45px;
+                height: 45px;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            .nav-and-controls {
+                gap: 10px;
+                width: 100%;
+                justify-content: space-between; /* توزيع احترافي لعناصر التحكم على الجوال */
+            }
+
+            .navbar {
+                gap: 4px;
+            }
+
+                .navbar a {
+                    padding: 6px 10px;
+                    font-size: 0.8rem;
+                }
+
+            /* تحسين شكل زر المنيو الصوري ليناسب مساحة هيدر الموبايل */
+            .menu-image-link {
+                font-size: 0.8rem !important;
+                padding: 6px 12px !important;
+                border-radius: 15px;
+            }
+
+            .theme-toggle-btn {
+                width: 32px;
+                height: 32px;
+                font-size: 0.95rem;
+            }
+
+            .hero {
+                height: 320px;
+                padding: 0 15px;
+            }
+
+                .hero h2 {
+                    font-size: 1.65rem;
+                }
+
+                .hero p {
+                    font-size: 1.05rem;
+                    margin-bottom: 20px;
+                }
+
+            .cta-btn {
+                padding: 12px 25px;
+                font-size: 0.95rem;
+            }
+
+            /* كروت القائمة تظهر كرت تلو الآخر بترتيب جذاب وسلس وسهل للتصفح السريع */
+            .menu-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .category-img-wrapper {
+                height: 200px;
+            }
+
+            .category-content {
+                padding: 15px; /* تقليص الحواف ليعطي مساحة أكبر للنصوص والأصناف */
+            }
+
+            .menu-category h3 {
+                font-size: 1.2rem;
+                margin-bottom: 12px;
+            }
+
+            .menu-item {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+                padding-bottom: 5px;
+            }
+
+            .menu-call-banner {
+                flex-direction: column;
+                gap: 8px;
+                padding: 15px 20px;
+                border-radius: 20px;
+                font-size: 1rem;
+                width: 100%;
+            }
+
+                .menu-call-banner i.fa-arrow-left {
+                    transform: rotate(-90deg);
+                    animation: bounceArrowDown 1.2s infinite ease-in-out;
+                }
+
+            /* المراجعات والأسهم على الجوال لعدم التغطية على النصوص */
+            .reviews-container {
+                padding: 0 10px;
+            }
+
+            .review-card {
+                padding: 20px;
+                border-right-width: 4px;
+            }
+
+            .review-text {
+                font-size: 0.9rem;
+            }
+
+            /* إنزال الأسهم لأسفل كرت المراجعة لسهولة الضغط دون تداخل الحروف */
+            .slider-btn {
+                top: auto;
+                bottom: -55px;
+                transform: none;
+                width: 34px;
+                height: 34px;
+                font-size: 0.9rem;
+            }
+
+                .slider-btn.prev {
+                    right: calc(50% - 45px);
+                }
+
+                .slider-btn.next {
+                    left: calc(50% - 45px);
+                }
+
+            .slider-dots {
+                margin-top: 70px;
+            }
+
+            /* قسم البيانات والخرائط */
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .info-details {
+                text-align: center;
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .info-box {
+                background: rgba(255, 255, 255, 0.02);
+                padding: 12px;
+                border-radius: 10px;
+            }
+
+            .map-action-container {
+                min-height: auto;
+                padding: 25px 15px;
+            }
+
+            .location-btn {
+                width: 100%;
+                justify-content: center;
+                font-size: 0.95rem;
+                padding: 12px 20px;
+            }
+        }
+
+        /* تحسين إضافي للشاشات الصغيرة جداً جداً لمنع تداخل القوائم */
+        @media (max-width: 400px) {
+            body {
+                padding-top: 165px;
+            }
+
+            .header-container {
+                gap: 6px;
+            }
+
+            .navbar a {
+                padding: 4px 6px;
+                font-size: 0.75rem;
+            }
+
+            .menu-image-link {
+                font-size: 0.75rem !important;
+                padding: 4px 8px !important;
+            }
+        }
+
+        @keyframes bounceArrowDown {
+            0%, 100% {
+                transform: translateY(0) rotate(-90deg);
+            }
+
+            50% {
+                transform: translateY(5px) rotate(-90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEcKRZJXwhmoT-0xy_vdbcLbGPfSbEGVvpKx5a3Ca7ZK-z8Mmy49zOIM0&s=10" alt="لوجو مطعم النور الصافي الجديد" class="restaurant-logo">
+                <h1>مطعم النور الصافي</h1>
+            </div>
+            <div class="nav-and-controls">
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                        <li><a href="#menu" class="nav-link">القائمة</a></li>
+                        <li><a href="#reviews" class="nav-link">المراجعات</a></li>
+                        <li><a href="#contact" class="nav-link">اتصل</a></li>
+                        <li><a href="https://scontent.famm13-1.fna.fbcdn.net/v/t39.30808-6/492006736_1095264569304333_1080772476378321428_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1131&ctp=s1600x1131&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH6l-8eqmQaY346HfdF7OCwTpnIj7i-QB5OmciPuL5AHlGz0nokPywgSAJ1S_Og0kU-f32wl5XiVRKskP0HWbHI&_nc_ohc=CcD63A98-E8Q7kNvwElndWI&_nc_oc=AdrPZ1341iKIW7fJRfPxyO1PI938tDW4MJun1qpGugXVHTOrDUrb7TGr0VVenU8n4rhOk4nx5NGb3jBPmRRUUWwR&_nc_zt=23&_nc_ht=scontent.famm13-1.fna&_nc_gid=wBNQ7hCQsLoDlEbX2asVJg&_nc_ss=7b2a8&oh=00_Af9SHl66iCWplNiEmYJ5Db5EwdXVyX1sNZOtcEH54LuM3A&oe=6A41B71A" target="_blank" class="nav-link menu-image-link"><i class="fas fa-book-open"></i> المنيو (صورة)</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle-btn" id="theme-toggle" title="تبديل المظهر" aria-label="تبديل المظهر">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>طعم لا يُقاوم وجودة لا تساوم</h2>
+        <p>جرب الآن وجبات الشاورما، البروستد، والبرغر المميزة لدينا</p>
+        <a href="tel:0791494980" class="cta-btn">اطلب الآن: 0791494980</a>
+    </section>
+
+    <main id="menu" class="menu-container">
+        <h2 class="section-title">قائمة الطعام (المنيو)</h2>
+        <p class="section-subtitle">نقدم لكم تشكيلة مختارة من أفضل الوجبات المحضّرة طازجة يومياً</p>
+
+        <div class="menu-grid">
+            <div class="menu-category">
+                <div class="category-img-wrapper">
+                    <img class="category-img" src="https://cdn.moshtare.com/images/originals/02-14-2023_0627pmb7beea089d073f3e06f4.jpg" alt="وجبة شاورما عربي دجاج مميزة مطعم النور الصافي">
+                </div>
+                <div class="category-content">
+                    <h3>الـشـاورمــا</h3>
+                    <div class="menu-item"><span>ساندويش شاورما عادي 70 غرام</span> <span class="item-price">1.70 د.أ</span></div>
+                    <div class="menu-item"><span>ساندويش شاورما كبير 120 غرام</span> <span class="item-price">2.30 د.أ</span></div>
+                    <div class="menu-item"><span>وجبة شاورما النور + صوص حار</span> <span class="item-price">2.20 د.أ</span></div>
+                    <div class="menu-item"><span>وجبة شاورما سوبر + صوص حار</span> <span class="item-price">2.85 د.أ</span></div>
+                    <div class="menu-item"><span>وجبة عائلية جامبو + 2 لتر ماتريكس</span> <span class="item-price">17.00 د.أ</span></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <div class="category-img-wrapper">
+                    <img class="category-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500" alt="برغر دجاج ولحم">
+                </div>
+                <div class="category-content">
+                    <h3>الـبـرغــر</h3>
+                    <div class="menu-item"><span>ساندويش برغر لحمة</span> <span class="item-price">1.10 د.أ</span></div>
+                    <div class="menu-item"><span>ساندويش برغر دجاج دبل + جبنة</span> <span class="item-price">2.00 د.أ</span></div>
+                    <div class="menu-item"><span>وجبة برغر لحمة + صوص حار</span> <span class="item-price">2.50 د.أ</span></div>
+                    <div class="menu-item"><span>وجبة مكس برغر دبل + صوص حار</span> <span class="item-price">3.25 د.أ</span></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <div class="category-img-wrapper">
+                    <img class="category-img" src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=500" alt="بروستد مقرمش">
+                </div>
+                <div class="category-content">
+                    <h3>الـبـروسـتـد</h3>
+                    <div class="menu-item"><span>4 قطع بروستد + مقبلات وبطاطا</span> <span class="item-price">3.50 د.أ</span></div>
+                    <div class="menu-item"><span>8 قطع بروستد + مقبلات وبطاطا</span> <span class="item-price">6.50 د.أ</span></div>
+                    <div class="menu-item"><span>12 قطعة بروستد + مقبلات وبطاطا</span> <span class="item-price">10.00 د.أ</span></div>
+                    <div class="menu-item"><span>وجبة كريسبي</span> <span class="item-price">3.00 د.أ</span></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <div class="category-img-wrapper">
+                    <img class="category-img" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500" alt="وجبات سناكات سريعة">
+                </div>
+                <div class="category-content">
+                    <h3>وجبات السناكات</h3>
+                    <div class="menu-item"><span>وجبة زنجر 200 غم + صوص حار</span> <span class="item-price">2.75 د.أ</span></div>
+                    <div class="menu-item"><span>وجبة فامينا دبل 400 غم + صوص حار</span> <span class="item-price">3.85 د.أ</span></div>
+                    <div class="menu-item"><span>وجبة ستيك دجاج 200 غم + صوص حار</span> <span class="item-price">2.75 د.أ</span></div>
+                    <div class="menu-item"><span>وجبة فيلادلفيا 200 غم + صوص حار</span> <span class="item-price">2.85 د.أ</span></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="menu-more-box">
+        <a href="tel:0791494980" class="menu-call-banner">
+            <i class="fas fa-phone-flip"></i>
+            هل تبحث عن المزيد؟ اتصل بنا لمعرفة قائمة الطعام كاملة
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
+
+    <section id="reviews" class="reviews-section">
+        <h2 class="section-title">آراء زبائننا: نفخر بتقديم أفضل جودة</h2>
+        <p class="section-subtitle">نلتزم بأعلى معايير الجودة لنقدم لكم تجربة تذوق استثنائية تنال رضاكم دائماً</p>
+
+        <div class="google-rating-box">
+            <div class="rating-score">
+                <i class="fab fa-google"></i> 4.3 / 5
+            </div>
+            <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="rating-text">تقييم المطعم العام على خرائط Google</div>
+        </div>
+
+        <div class="reviews-container">
+            <button class="slider-btn prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-right"></i></button>
+            <button class="slider-btn next" onclick="moveSlide(1)"><i class="fas fa-chevron-left"></i></button>
+
+            <div class="slider-wrapper">
+                <div class="review-card active">
+                    <div class="review-header">
+                        <div class="user-info">
+                            <div class="user-icon">أ</div>
+                            <div class="user-name">أحمد الخالدي</div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-text">"ما شاء الله، الشاورما عندهم طعمها خرافي وعلى الأصول، والبروستد مقرمش ونظيف جداً. المعاملة سريعة والتوصيل دايماً بوقت قياسي."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-info">
+                            <div class="user-icon">م</div>
+                            <div class="user-name">محمد سلامة</div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-text">"من أفضل المطاعم في المنطقة، جربت وجبة زنجر دبل والبرغر بصراحة نكهة مميزة والكمية ممتازة مقارنة بالسعر. الله يبارك برزقكم."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-info">
+                            <div class="user-icon">ر</div>
+                            <div class="user-name">رائد العبادي</div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-text">"وجبة عائلية جامبو دايماً خيارنا الأول بيوم الجمعة، الثومية والبطاطا والبهارات ممتازة، ومشروب الماتريكس بكمل السهرة. بنصح فيه بشدة."</p>
+                </div>
+            </div>
+            <div class="slider-dots" id="slider-dots"></div>
+        </div>
+    </section>
+
+    <section class="social-section">
+        <h3 class="social-title">تابعونا على صفحاتنا الرسمية</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/18E66vRPh4/" target="_blank" class="social-icon facebook" title="فيسبوك" aria-label="تابعنا على فيسبوك">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/alnoor_alsafi?igsh=MXR3cmYwaXU0N3pxMA==" target="_blank" class="social-icon instagram" title="انستغرام" aria-label="تابعنا على انستغرام">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/962791494980" target="_blank" class="social-icon whatsapp" title="واتساب" aria-label="تواصل معنا عبر واتساب">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="info-section">
+        <div class="info-grid">
+            <div class="info-details">
+                <div class="info-box">
+                    <h4><i class="fas fa-map-marker-alt"></i> العنوان</h4>
+                    <p>العاصمة عمان، الأردن</p>
+                </div>
+                <div class="info-box">
+                    <h4><i class="fas fa-phone"></i> أرقام الهواتف للطلب</h4>
+                    <p dir="ltr">07 9149 4980</p>
+                </div>
+                <div class="info-box">
+                    <h4><i class="fas fa-clock"></i> ساعات الدوام</h4>
+                    <p>يومياً من الساعة 12:00 ظهراً وحتى الساعة 2:00 بعد منتصف الليل</p>
+                </div>
+            </div>
+
+            <div class="map-action-container">
+                <p>يمكنك العثور على موقعنا بكل سهولة والوصول إلينا عبر خرائط Google</p>
+                <a href="https://maps.app.goo.gl/9y3LqNf1Uf6eN9nN7" target="_blank" class="location-btn">
+                    <i class="fas fa-map-location-dot"></i> فتح موقع المطعم على الخريطة
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 مطعم النور الصافي. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <div class="floating-buttons-container">
+        <a href="tel:0791494980" class="floating-btn call-float" title="اتصل بنا الآن" aria-label="اتصل بنا الآن">
+            <i class="fas fa-phone"></i>
+        </a>
+        <button class="floating-btn back-to-top" id="backToTopBtn" title="الرجوع للأعلى" aria-label="الرجوع للأعلى">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </div>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const icon = themeToggleBtn.querySelector('i');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        icon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+        const theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        icon.classList.replace('fa-sun', 'fa-moon');
+        } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        icon.classList.replace('fa-moon', 'fa-sun');
+        }
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.review-card');
+        const dotsContainer = document.getElementById('slider-dots');
+
+        slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if(index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function updateSlider() {
+        slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === currentSlide);
+        dots[index].classList.toggle('active', index === currentSlide);
+        });
+        }
+
+        function moveSlide(direction) {
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        updateSlider();
+        }
+
+        function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+        }
+
+        setInterval(() => {
+        moveSlide(1);
+        }, 7000);
+
+        const sections = document.querySelectorAll('section, main');
+        const navLinks = document.querySelectorAll('.navbar a');
+
+        window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 150)) {
+        current = section.getAttribute('id');
+        }
+        });
+
+        navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current) && !link.classList.contains('menu-image-link')) {
+        link.classList.add('active');
+        }
+        });
+
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+        } else {
+        backToTopBtn.classList.remove('show');
+        }
+        });
+
+        document.getElementById('backToTopBtn').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
